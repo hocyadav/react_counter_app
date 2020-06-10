@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 
 class Counter extends Component {
     state = { 
-        count : 0
+        count : 0,
+        url: "https://picsum.photos/200"
      }
     render() { 
         return ( 
         <div>
-            <span>{this.state.count}</span><button>Increment</button>
+            <img src={this.state.url}></img>
+            <span>{this.state.count}</span>
+            <button className="btn btn-secondary btn-sm">Increment</button>
         </div>
         );
     }
