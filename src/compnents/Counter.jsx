@@ -18,7 +18,8 @@ class Counter extends Component {
     }
 
     formatCount(){
-        return this.state.count === 0 ? "Zero" : this.state.count;
+        const {count} = this.state; //object destructuring
+        return count === 0 ? "Zero" : count;//ctrl + d : multi select 
     }
 }
 export default Counter;
