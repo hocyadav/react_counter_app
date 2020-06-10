@@ -12,7 +12,7 @@ class Counter extends Component {
             <span className={this.newMethod()}>{this.formatCount()}</span>
             <button className="btn btn-secondary btn-sm">Increment</button>
             <ul>
-        {this.state.tagList.map(tag => <li>{tag}</li>)}
+        {this.state.tagList.map(tag => <li key={tag} >{tag}</li>)}
             </ul>
         </div>
         );
