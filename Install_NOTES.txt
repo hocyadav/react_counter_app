@@ -1,0 +1,8 @@
+npx create-react-app counter-app
+open app folder and install
+npm install --save bootstrap
+npm install bootstrap
+
+npm start
+//folder location
+npm install package.json
