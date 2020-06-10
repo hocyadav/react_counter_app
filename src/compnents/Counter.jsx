@@ -1,18 +1,24 @@
 import React, { Component } from 'react';
 
 class Counter extends Component {
-    state = { 
-        count : 0,
-        url: "https://picsum.photos/200"
+    state = {       //state as object
+        count : 0
+     }
+     styles = {     //styles as a object
+         fontSize: 50,
+         fontWeight: "bold"
      }
     render() { 
         return ( 
         <div>
-            <img src={this.state.url}></img>
-            <span>{this.state.count}</span>
+            <span style={this.styles}>{this.formatCount()}</span>
             <button className="btn btn-secondary btn-sm">Increment</button>
         </div>
         );
+    }
+
+    formatCount(){
+        return this.state.count === 0 ? "Zero" : this.state.count;
     }
 }
 export default Counter;
