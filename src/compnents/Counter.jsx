@@ -6,11 +6,9 @@ class Counter extends Component {
      }
 
     render() { 
-        let classes = this.newMethod();
-        
         return ( 
         <div>
-            <span className={classes}>{this.formatCount()}</span>
+            <span className={this.newMethod()}>{this.formatCount()}</span>
             <button className="btn btn-secondary btn-sm">Increment</button>
         </div>
         );
