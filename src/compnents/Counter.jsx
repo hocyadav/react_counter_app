@@ -19,7 +19,8 @@ class Counter extends Component {
 
     formatCount(){
         const {count} = this.state; //object destructuring
-        return count === 0 ? "Zero" : count;//ctrl + d : multi select 
+        const jsxExpression = <h1>Zero</h1>;//we can pass JSX expression 
+        return count === 0 ? jsxExpression : count;//ctrl + d : multi select 
     }
 }
 export default Counter;
