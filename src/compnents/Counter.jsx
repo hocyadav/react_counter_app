@@ -6,14 +6,14 @@ class Counter extends Component {
         tagList : ["tag1","tag2","tag3"]
      };
 
+     renderTags() {
+         if(this.state.tagList.length === 0) return <p>There are no tags</p>;
+         return <ul>{this.state.tagList.map(tag => <li key={tag} >{tag}</li>)}</ul>;
+     }
     render() { 
         return ( 
         <div>
-            <span className={this.newMethod()}>{this.formatCount()}</span>
-            <button className="btn btn-secondary btn-sm">Increment</button>
-            <ul>
-        {this.state.tagList.map(tag => <li key={tag} >{tag}</li>)}
-            </ul>
+            {this.renderTags()}
         </div>
         );
     }
