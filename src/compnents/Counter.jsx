@@ -6,14 +6,25 @@ class Counter extends Component {
         tagList : []
      };
 
-     renderTags() {
-         if(this.state.tagList.length === 0) return <p>There are no tags</p>;
-         return <ul>{this.state.tagList.map(tag => <li key={tag} >{tag}</li>)}</ul>;
+
+    //  constructor() {
+    //      super();
+    //      //console.log(this);
+    //      //this.handleIncrement.bind(this);//bind will return new instance of handleIncrement
+    //      this.handleIncrement = this.handleIncrement.bind(this);
+    //  }
+
+     handleIncrement = () => {
+         console.log("Increment ",this);//able to access this, now we can update count variable
+         this.state.count++;
+         this.setState({count : this.state.count + 1});
      }
     render() { 
         return ( 
         <div>
-            {this.renderTags()}
+
+            <span className={classes}>{this.formatCount()}</span>
+            <button onClick={this.handleIncrement} className="btn btn-secondary btn-sm">Increment</button>
         </div>
         );
     }
