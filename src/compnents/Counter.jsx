@@ -13,7 +13,9 @@ class Counter extends Component {
     //  }
 
      handleIncrement = () => {
-         console.log("Increment ",this);//this is undefined
+         console.log("Increment ",this);//able to access this, now we can update count variable
+         this.state.count++;
+         this.setState({count : this.state.count + 1});
      }
 
     render() { 
