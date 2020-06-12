@@ -15,18 +15,22 @@ class Counter extends Component {
     //  }
 
     
-     handleIncrement = () => {
-         console.log("Increment ",this);//able to access this, now we can update count variable
+     handleIncrement = (product) => {
+         console.log(product);//able to access this, now we can update count variable
          this.state.count++;
          this.setState({count : this.state.count + 1});
-     }
+     };
+     doHandleIncrement = () => {
+         this.handleIncrement({id : 1});
+     };
+
     render() { 
 
         return ( 
         <div>
 
             <span className={this.newMethod()}>{this.formatCount()}</span>
-            <button onClick={this.handleIncrement} className="btn btn-secondary btn-sm">Increment</button>
+            <button onClick={this.doHandleIncrement} className="btn btn-secondary btn-sm">Increment</button>
         </div>
         );
     }
@@ -35,12 +39,12 @@ class Counter extends Component {
         let classes = "badge m-2 "; //common classes
         classes += (this.state.count === 0) ? "badge-warning" : "badge-primary";
         return classes;
-    }
+    };
 
     formatCount(){
         const {count} = this.state; //object destructuring
         const jsxExpression = <h1>Zero</h1>;//we can pass JSX expression 
         return count === 0 ? jsxExpression : count;//ctrl + d : multi select 
-    }
+    };
 }
 export default Counter;
