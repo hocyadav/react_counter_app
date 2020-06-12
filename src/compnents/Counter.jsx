@@ -5,6 +5,13 @@ class Counter extends Component {
         count : 0
      }
 
+     constructor() {
+         super();
+         //console.log(this);
+         //this.handleIncrement.bind(this);//bind will return new instance of handleIncrement
+         this.handleIncrement = this.handleIncrement.bind(this);
+     }
+
      handleIncrement(){
          console.log("Increment ",this);//this is undefined
      }
