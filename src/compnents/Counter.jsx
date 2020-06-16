@@ -8,7 +8,6 @@ class Counter extends Component {
 
      handleIncrement = (product) => {
          console.log(product);//able to access this, now we can update count variable
-         this.state.count++;
          this.setState({count : this.state.count + 1});
      };
 
