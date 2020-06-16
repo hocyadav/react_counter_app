@@ -5,12 +5,7 @@ class Counter extends Component {
         count : 0,
         tagList : []
      };
-    //  constructor() {
-    //      super();
-    //      //console.log(this);
-    //      //this.handleIncrement.bind(this);//bind will return new instance of handleIncrement
-    //      this.handleIncrement = this.handleIncrement.bind(this);
-    //  }
+
      handleIncrement = (product) => {
          console.log(product);//able to access this, now we can update count variable
          this.state.count++;
