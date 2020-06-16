@@ -6,6 +6,7 @@ class Counter extends Component {
         tagList : []
      };
 
+     
 
     //  constructor() {
     //      super();
