@@ -1,3 +1,4 @@
+===== react new project start =====
 npx create-react-app counter-app
 open app folder and install
 npm install --save bootstrap
@@ -8,6 +9,8 @@ npm start
 npm install package.json
 
 
+
+===== clone react app and run ======
 
 https://stackoverflow.com/questions/47137086/starting-react-app-from-pulled-github-project
 Carry out the following steps:
