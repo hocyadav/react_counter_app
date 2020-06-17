@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 
 class Counter extends Component {
     state = {       //state as object
-        count : 0,
-        tagList : []
+        count : this.props.value
      };
 
      handleIncrement = (product) => {
@@ -12,6 +11,7 @@ class Counter extends Component {
      };
 
     render() { 
+        console.log("props", this.props);
         return ( 
         <div>
             <span className={this.newMethod()}>{this.formatCount()}</span>
